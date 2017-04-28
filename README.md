@@ -1,0 +1,1 @@
+This project searches a local MySQL database for the capital city of the US state entered by the end user. AngularJS is used to process the user input and then output the JSON formatted MySQL data. The database query itself is handled by PHP.

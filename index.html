@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="controller.js" type="text/javascript"></script>
+    <title>US State Capital Searcher</title>
+  </head>
+  <body>
+    <div ng-app="capitalSearch" ng-controller="capitalCtrl">
+        <div class="search"><input type="search" class="searchField" id="searchField" ng-model="state" ng-keyup="getCapital()" placeholder="Search for a US state..."></input></div>
+        <div class="outputBox">
+          <div id="state" class="state">State: {{state}}</div>
+          <div id="capital" class="capital" ng-repeat="x in states">Capital: {{x.capital}}</div>
+        </div>
+    </div>
+    <div class = "description">
+        <p>
+          This project searches a local MySQL database for the capital city of the US state entered by the end user. AngularJS is used to process the user input and then output the JSON formatted MySQL data.
+          The database query itself is handled by PHP.
+        </p>
+    <div class="download"><a href="https://github.com/benellis105/states">Download Source</a></div>
+  </body>
+</html>
